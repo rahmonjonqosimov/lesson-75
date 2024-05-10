@@ -6,6 +6,7 @@ import CreateUser from "./router/create-user/CreateUser";
 import AllUsers from "./router/all-users/AllUsers";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import AnimatedCursor from "react-animated-cursor";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/all-users" element={<AllUsers />} />
       </Routes>
       <ToastContainer />
+      <AnimatedCursor showSystemCursor={true} innerScale={0.1} />
     </div>
   );
 }

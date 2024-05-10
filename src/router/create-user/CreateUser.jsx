@@ -3,6 +3,7 @@ import "./CreateUser.css";
 import { useDispatch } from "react-redux";
 import { addUser } from "../../redux/usersSlice";
 import { toast } from "react-toastify";
+import { motion } from "framer-motion";
 
 function CreateUser() {
   let dispatch = useDispatch();
@@ -41,7 +42,12 @@ function CreateUser() {
     }
   };
   return (
-    <div className="create__user">
+    <motion.div
+      initial={{ transform: "scale(0)", transformOrigin: "left" }}
+      animate={{ transform: "scale(1)" }}
+      exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
+      className="create__user"
+    >
       <h2>Create User</h2>
       <form onSubmit={handleSubmit} className="create__user-form" action="">
         <input
@@ -92,7 +98,7 @@ function CreateUser() {
         </select>
         <button type="submit">Create</button>
       </form>
-    </div>
+    </motion.div>
   );
 }
 
