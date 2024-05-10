@@ -7,6 +7,14 @@
   align-items: center;
   gap: 40px;
 }
+.link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.navbar svg {
+  display: none;
+}
 @media screen and (max-width: 750px) {
   .navbar {
     padding: 0 20px;
@@ -19,10 +27,30 @@
     font-size: 14px;
   }
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 450px) {
   .navbar {
-    flex-wrap: wrap !important;
+    justify-content: space-between;
+  }
+  .navbar svg {
+    display: block;
+    font-size: 24px;
+  }
+  .link {
+    position: fixed;
+    top: 80px;
+    background: linear-gradient(30deg, dodgerblue, violet);
+    padding: 30px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    transform-origin: top;
+    transform: scaleY(0);
     justify-content: center;
+    transition: 0.3s;
+  }
+  .link.show {
+    transform: scaleY(1);
   }
 }
 .navbar a {
