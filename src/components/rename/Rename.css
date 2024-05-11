@@ -5,7 +5,7 @@
   background: #fff;
   position: fixed;
   z-index: 11;
-  top: 30%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   border-radius: 10px;
